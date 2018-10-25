@@ -4,7 +4,6 @@ import {
   View,
   FlatList,
   StatusBar,
-  ActivityIndicator,
 } from 'react-native';
 
 import { HeaderMain } from '../HeaderMain';
@@ -13,6 +12,7 @@ import { TabPane } from '../TabPane';
 import { Card } from '../Card';
 import { Footer } from '../Footer';
 import { ModalWrapper } from '../ModalWrapper';
+import { Preloader } from '../Preloader';
 import { styles } from './styles';
 
 type State = {
@@ -41,6 +41,7 @@ type Props = {
   activeGenre: number,
   activeSort: string,
   pages: number,
+  // persistor: Object,
 };
 
 export class Main extends PureComponent<Props, State> {
@@ -71,6 +72,7 @@ export class Main extends PureComponent<Props, State> {
       clearList,
       fetchNowPlaying,
       fetchTop100,
+      // persistor,
     } = this.props;
 
     const { activeTab } = this.state;
@@ -79,6 +81,7 @@ export class Main extends PureComponent<Props, State> {
     if (activeTab !== id) {
       // console.log('CHANGE_TAB');
       clearList();
+      // persistor.purge();
       if (id === 0) {
         fetchNowPlaying(1, activeGenre, activeSort);
       } else {
@@ -198,7 +201,7 @@ export class Main extends PureComponent<Props, State> {
 
     return (
       <View>
-        {isLoading ? <ActivityIndicator animating size="large" /> : null}
+        {isLoading ? <Preloader /> : null}
         <Footer />
       </View>
     );

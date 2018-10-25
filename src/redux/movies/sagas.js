@@ -5,6 +5,7 @@ import {
   takeEvery,
   fork,
 } from 'redux-saga/effects';
+import { delay } from 'redux-saga';
 
 import * as CONSTANTS from './constants';
 import {
@@ -28,7 +29,10 @@ import {
   requestCredits,
 } from './requests';
 
+// const delay = ms => new Promise(res => setTimeout(res, ms));
+
 function* fetchNowPlaying({ payload } = { payload: { page: 1 } }) {
+  yield delay(2000);
   const { page, genre, filter } = payload;
   const { data } = yield call(requestNowPlayingMovies, page, genre, filter);
   if (data && data.results) {
@@ -41,6 +45,7 @@ function* fetchNowPlaying({ payload } = { payload: { page: 1 } }) {
 }
 
 function* fetchTop100({ payload }) {
+  yield delay(2000);
   const { page, genre, filter } = payload;
   const { data } = yield call(requestTop100, page, genre, filter);
   if (data && data.results) {
@@ -51,8 +56,6 @@ function* fetchTop100({ payload }) {
     }
   }
 }
-
-const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function* searchMovies({ payload }) {
   try {

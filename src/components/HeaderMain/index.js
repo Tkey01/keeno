@@ -7,12 +7,11 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 
 import { styles } from './styles';
-import { images } from '../../global/index';
 import { Button } from '../Button';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { gradient } from '../../global/colors';
 import { HeaderUserLine } from '../HeaderUserLine';
-import { ConnectedSearch } from '../../containers/ConnectedSearch';
+import { ConnectedToggleFavourite } from '../../containers/ConnectedToggleFavourite';
 
 type Props = {
   id: number,
@@ -20,9 +19,7 @@ type Props = {
   title: string,
   runtime: number,
   genres: Array<Object>,
-  favourites: Array<Object>,
   navigation: Object,
-  toggleFavourite: number => void,
   toggleModal: string => void,
   scrollTop: () => void,
 };
@@ -41,14 +38,10 @@ export class HeaderMain extends Component<Props> {
       title,
       runtime,
       genres,
-      favourites,
       navigation,
-      toggleFavourite,
       toggleModal,
       scrollTop,
     } = this.props;
-
-    const favourite = favourites[id];
 
     return (
       <ImageBackground
@@ -104,13 +97,7 @@ export class HeaderMain extends Component<Props> {
               Подробнее
             </Button>
 
-            <Button
-              type="favourite"
-              heart={favourite ? images.heartFill : images.heart}
-              onPress={() => toggleFavourite(id)}
-            >
-              {favourite ? 'В избранном' : 'В избранное'}
-            </Button>
+            <ConnectedToggleFavourite id={id} />
           </View>
         </View>
       </ImageBackground>

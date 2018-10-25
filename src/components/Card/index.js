@@ -1,5 +1,5 @@
 // @flow
-/* eslint camelcase: ["error", {ignoreDestructuring: true}] */
+/* eslint camelcase: 0 */
 import React from 'react';
 import {
   View,
@@ -7,7 +7,7 @@ import {
   Image,
 } from 'react-native';
 
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { styles } from './styles';
 import { rateConvert } from '../../services/helpers';
 import { CONFIG } from '../../services/api';
@@ -35,12 +35,15 @@ export const Card = ({
     onPress={() => { searchById(id); scrollTop(); }}
   >
     <View style={styles.similarTitleBlock}>
-      <TextC style={styles.similarTitleBlockText}>{title}</TextC>
+      <TextC style={styles.similarTitleBlockText}>
+        {title}
+      </TextC>
       <View style={styles.similarRateContainer}>
         {rateConvert(vote_average).map((item2, index) => (
           <Star
             key={index.toString()}
-            starWidth={item2}
+            starValue={item2}
+            starSize="small"
           />
         ))}
       </View>

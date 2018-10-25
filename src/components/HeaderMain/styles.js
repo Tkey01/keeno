@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
   },
   textInfoContainer: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     alignItems: 'center',
     marginBottom: scaleByVertical(16),
   },

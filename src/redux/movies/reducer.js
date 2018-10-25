@@ -12,9 +12,6 @@ const initState = {
   searchResults: [],
   filmsList: [],
   byId: {},
-  favourites: {
-    351286: true, 363088: true, 353081: true, 299536: true, 260513: true, 442249: true,
-  },
   pages: 0,
   modal: {
     isOpen: false,
@@ -91,11 +88,6 @@ const setSimilarMovies = (state, { similar }) => ({
   similar,
 });
 
-const toggleFavourite = ({ favourites, ...restState }, { id }) => ({
-  ...restState,
-  favourites: { ...favourites, [id]: !favourites[id] },
-});
-
 const toggleModal = ({ modal, ...restState }, { type }) => ({
   ...restState,
   modal: { ...modal, isOpen: !modal.isOpen, [type]: { isOpen: !modal[type].isOpen, text: '' } },
@@ -137,7 +129,6 @@ const handlers = {
   [TYPES.SET_SIMILAR_MOVIES]: setSimilarMovies,
   [TYPES.CLEAR_ERROR]: clearError,
   [TYPES.SET_ERROR]: setError,
-  [TYPES.TOGGLE_FAVOURITE]: toggleFavourite,
   [TYPES.TOGGLE_MODAL]: toggleModal,
   [TYPES.CHANGE_SEARCH_TEXT]: changeSearchText,
   [TYPES.SET_CREDITS]: setCredits,

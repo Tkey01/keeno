@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import { styles } from './styles';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 
 type Props = {
   sortGenre: number,

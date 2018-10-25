@@ -6,7 +6,7 @@ import { colors } from '../../global';
 
 export const styles = StyleSheet.create({
   preloaderContainer: {
-    marginTop: 200,
+    marginVertical: scaleByVertical(20),
     height: scaleByVertical(80),
     justifyContent: 'space-evenly',
     alignItems: 'center',

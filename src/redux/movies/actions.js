@@ -63,11 +63,6 @@ export const clearSearch = () => ({
   type: TYPES.CLEAR_SEARCH,
 });
 
-export const toggleFavourite = id => ({
-  type: TYPES.TOGGLE_FAVOURITE,
-  payload: { id },
-});
-
 export const toggleModal = type => ({
   type: TYPES.TOGGLE_MODAL,
   payload: { type },

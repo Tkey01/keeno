@@ -8,7 +8,7 @@ import moment from 'moment';
 
 import { images } from '../../global';
 import { styles } from './styles';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 
 export const Footer = () => {
   const year = moment().format('YYYY');

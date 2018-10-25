@@ -2,10 +2,10 @@ import {
   put,
   call,
   fork,
-  takeLatest,
+  // takeLatest,
 } from 'redux-saga/effects';
 
-import * as CONSTANTS from './constants';
+// import * as CONSTANTS from './constants';
 import { setGenres } from './actions';
 import { requestFetchGenres } from './requests';
 

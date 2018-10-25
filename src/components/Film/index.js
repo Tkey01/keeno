@@ -17,7 +17,6 @@ type Props = {
   titleEN: string,
   runtime: number,
   genres: Array<Object>,
-  favourites: [],
   navigation: Object,
   toggleFavourite: number => void,
   voteCount: number,
@@ -35,14 +34,13 @@ type Props = {
 };
 
 export class Film extends Component<Props> {
+  getScrollViewRef = (node: ElementRef<typeof ScrollView>) => { this.refScrollView = node; }
+
   scrollTop = () => {
     this.refScrollView.scrollTo({ x: 0, y: 0, animated: true });
   }
 
-  getScrollViewRef = (node: ElementRef<typeof ScrollView>) => { this.refScrollView = node; }
-
   refScrollView: ?ElementRef<typeof ScrollView>;
-
 
   render() {
     const {
@@ -52,7 +50,6 @@ export class Film extends Component<Props> {
       titleEN,
       runtime,
       genres,
-      favourites,
       navigation,
       toggleFavourite,
       voteCount,
@@ -79,7 +76,6 @@ export class Film extends Component<Props> {
           bg={bg}
           title={title}
           titleEN={titleEN}
-          favourites={favourites}
           navigation={navigation}
           toggleFavourite={toggleFavourite}
           voteAverage={voteAverage}

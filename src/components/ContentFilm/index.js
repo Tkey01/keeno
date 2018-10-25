@@ -8,7 +8,7 @@ import moment from 'moment';
 
 import { styles } from './styles';
 import { images } from '../../global/index';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { Card } from '../Card';
 
 type Props = {
@@ -77,7 +77,7 @@ export const ContentFilm = ({
               <TextC style={[styles.contentTitle, styles.detailsTitle]}>Страны:</TextC>
               <View style={styles.detailsRowBlock}>
                 {countries.map((item, index) => (
-                  <View style={styles.detailesRowBlockCol} key={index}>
+                  <View style={styles.detailesRowBlockCol} key={item.name}>
                     <TextC style={styles.contentText}>{item.name + (index === countries.length - 1 ? '' : ',')}</TextC>
                     <View style={styles.detailsUnderLine} />
                   </View>

@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { styles } from './styles';
 import { colors } from '../../global';
 

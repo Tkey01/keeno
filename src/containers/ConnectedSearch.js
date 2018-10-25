@@ -15,7 +15,6 @@ import { Search } from '../components/Search';
 const mapStateToProps = state => ({
   modal: state.movies.modal,
   result: getSearchResults(state),
-
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

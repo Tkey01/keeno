@@ -1,13 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { Home } from '../scenes/Home';
-import { Buttons } from '../scenes/Buttons';
 import { MainPage } from '../scenes/MainPage';
 import { FilmPage } from '../scenes/FilmPage';
 import { SortGenrePage } from '../scenes/SortGenrePage';
 import { SortByPage } from '../scenes/SortByPage';
-import { Preloader } from '../components/Preloader';
 
 const styles = StyleSheet.create({
   cardStyle: {
@@ -18,11 +15,7 @@ const styles = StyleSheet.create({
 
 export const AppNavigator = createStackNavigator({
   Home: {
-    screen: Preloader,
-  },
-  Buttons: {
-    path: 'buttons',
-    screen: Buttons,
+    screen: MainPage,
   },
   MainPage: {
     path: 'main-page',

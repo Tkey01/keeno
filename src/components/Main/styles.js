@@ -1,7 +1,7 @@
 // @flow
 import { StyleSheet } from 'react-native';
 
-import { scale, scaleByVertical } from '../../services/scale';
+import { scale } from '../../services/scale';
 import { colors } from '../../global';
 
 export const styles = StyleSheet.create({

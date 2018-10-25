@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -55,6 +54,7 @@
 		EC7F62A42E4745C4A33C971E /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F844329DFDD43AAA33ED703 /* libRNSVG.a */; };
 		F4D9C7C82D474CE394F4A236 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 244C67FD682047F5A06F3AD3 /* Ionicons.ttf */; };
 		F57208F6A7E2454CA940CD97 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EFD687ADB2C49BF90B02FE1 /* FontAwesome.ttf */; };
+		C5BEB3DE008C4BE4BE341BBA /* SourceSansProLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 135B9C3BF57844F8B3331D10 /* SourceSansProLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -415,6 +415,7 @@
 		E8D16173FA7C417CAE1D5E2A /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		EA319F9A1498488998547439 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		F771717BB05849C68278A9D1 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		135B9C3BF57844F8B3331D10 /* SourceSansProLight.ttf */ = {isa = PBXFileReference; name = "SourceSansProLight.ttf"; path = "../src/assets/fonts/SourceSansProLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -729,6 +730,7 @@
 				4CABC757D4A745189EAB002F /* Zocial.ttf */,
 				2FB72082338645AC9379D4A8 /* sourceSansPro.ttf */,
 				069F3A31FBDB4B25BCD8FD3F /* sourceSansProBold.ttf */,
+				135B9C3BF57844F8B3331D10 /* SourceSansProLight.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1248,6 +1250,7 @@
 				50EBFD859F3E4E6B8D78337C /* Zocial.ttf in Resources */,
 				E2EA8814BAD645D28D23C454 /* sourceSansPro.ttf in Resources */,
 				6AEE97271F434051A5554B53 /* sourceSansProBold.ttf in Resources */,
+				C5BEB3DE008C4BE4BE341BBA /* SourceSansProLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

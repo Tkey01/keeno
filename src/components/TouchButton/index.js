@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import { colors } from '../../global';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 
 type Props = {
   style: Array<Object>,

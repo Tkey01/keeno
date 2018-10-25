@@ -2,12 +2,10 @@
 import React from 'react';
 import {
   View,
-  Image,
-  ImageBackground,
 } from 'react-native';
 
 import { styles } from './styles';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { rateConvert, rateCount } from '../../services/helpers';
 import { Star } from '../Star';
 
@@ -35,7 +33,8 @@ export const Rating = ({ voteAverage, voteCount }: Props) => {
         {arrStar.map((width, index) => (
           <Star
             key={index}
-            starWidth={width}
+            starValue={width}
+            starSize="big"
           />
         ))}
       </View>

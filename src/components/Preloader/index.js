@@ -6,12 +6,8 @@ import {
 } from 'react-native';
 
 import { styles } from './styles';
-import { TextC } from '../Text';
+import { TextC } from '../TextC';
 import { scaleByVertical } from '../../services/scale';
-
-type Props = {
-
-};
 
 const animations = [
   {

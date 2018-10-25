@@ -27,7 +27,6 @@ export const HeaderUserLine = ({
         source={images.logo}
         style={styles.logo}
         resizeMode="contain"
-        onPress={() => navigation.navigate('MainPage')}
       />
     </TouchableOpacity>
 
